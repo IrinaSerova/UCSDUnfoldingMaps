@@ -14,13 +14,13 @@ public class Student extends Person
 
 	public boolean isAsleep( int hr ) // override 
 	{ 
-		return 2 < hr && 8 > hr; 
+		return 1 < hr && 7 > hr; 
 	}
 	
 	public static void main(String[] args)
 	{
 		Person p;
 		p = new Student("Sally");
-		p.status(1);
+		p.status(12);
 	}
 }

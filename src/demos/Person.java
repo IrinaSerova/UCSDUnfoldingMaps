@@ -29,7 +29,7 @@ public class Person
 		if ( this.isAsleep( hr ) )
 			System.out.println( "Now offline: " + this );
 	    else
-	    	System.out.println( "Now online: " + this );
+	    	System.out.println( "Now online: " + this + ". Time is: " + hr + " : 00");
 	 }
 	
 }
