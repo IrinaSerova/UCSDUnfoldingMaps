@@ -22,5 +22,6 @@ public class Student extends Person
 		Person p;
 		p = new Student("Sally");
 		p.status(12);
+		p.dayParty("Sun");
 	}
 }
