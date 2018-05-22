@@ -16,19 +16,22 @@ public class MyPApplet extends PApplet{
 	
 	public void setup() {
 		//Add setup code for MyPApplet
-		size(400,400);				//set canvas size
+		size(500,500);				//set canvas size
 		background(255);			//set canvas color
-		stroke(0);				//set pen color
+		stroke(255, 255, 204, 20);	
+		strokeWeight(22);
+//		noStroke();//set pen color
 		img = loadImage("palmTrees.jpg", "jpg");
 	}
 	
 	public void draw() {
 		//Add drawing code for MyPApplet
+		int alpha = 100;
 		img.resize(0, height);			//resize loaded image to full height of canvas
 		image(img, 0, 0);			//display image 
 		int[] color = sunColorSec(second());		//calculate color code for sun
-		fill(color[0],color[1],color[2]);	//set sun color
-		ellipse(width/4,height/5,width/4,height/5);	//draw sun
+		fill(color[0],color[1],color[2], alpha);	//set sun color
+		ellipse(width/5,height/5,width/5,height/5);	//draw sun
 		
 	}
 	
@@ -44,6 +47,7 @@ public class MyPApplet extends PApplet{
 		rgb[0] = (int)(255*ratio);
 		rgb[1] = (int)(255*ratio);
 		rgb[2] = 0;
+		
 		
 		//System.out.println("R" + rgb[0] + " G" + rgb[1] + " B" + rgb[2]);
 		return rgb;
